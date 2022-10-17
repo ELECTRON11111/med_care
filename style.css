@@ -215,6 +215,23 @@ body {
 
 
 /* Create mobile layout */
+@media (max-width: 570px) {
+    #doctors {
+        max-width: 9rem;
+    }
+    .hearts {
+        height: 10%;
+        width: 50%;
+    }
+
+    .bulb {
+        position: absolute;
+        top: 36rem;
+        height: 12%;
+        padding-top: 50px;
+    }
+} 
+
 @media (max-width: 800px) {
     * {
         overflow-y: visible;
@@ -268,17 +285,17 @@ body {
     #doctors {
         position: relative;
         left: 64%;
-        bottom: 24px;
+        /* bottom: 10px; */
         /* position: static;
         align-self: flex-end; */
-        width: 0rem;
-        /* This was 13rem */
-        min-width: 11rem;
+        width: 15rem;
+        /* This was 13 */
+        min-width: 10rem;
     }
     
     .logo {
         /* display: none; */
-        top: 42%;
+        top: 46%;
     }
 
     .left img {
@@ -294,11 +311,11 @@ body {
 
     .right {
         width: 100vw;
-        margin-top: 10rem;
+        margin-top: 5rem;
     }
 
     .inputs, .right button {
-        min-width: 70vw;
+        min-width: 80vw;
         /* width: 90vw; */
     }
 }
