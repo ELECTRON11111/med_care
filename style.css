@@ -1,0 +1,354 @@
+:root {
+    --input-width: 29.25rem;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    /* Do now show scroll when there is an overflow in the y-axis */
+    overflow-y: hidden;
+}
+
+body {
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+
+    position: relative;
+}
+
+.left {
+    background-color: #0066FF;  
+    height: 100vh; 
+    flex-wrap: wrap;
+    width: 50vw;
+}
+
+.left img {
+    min-height: 20%;
+}
+
+.hearts {
+    height: 35%;
+}
+
+.bulb-com {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 10rem;
+}
+
+.bulb {
+    /* align-self: flex-end; */
+    height:25rem;
+    min-height: 16rem;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+}
+
+.comments img {
+    /* justify-self: flex-end; */
+    height: 8rem;
+    align-self: flex-start;
+}
+
+.comments img:nth-child(1){
+    /* height: 10em; */
+    position: relative;
+    top: 4rem;
+}
+
+.comments img:nth-child(2){
+    height: 10em;
+    bottom: 40px;
+}
+
+.comments img:nth-child(3){
+    height: 12em;
+    position: relative;
+    bottom: 5rem;
+}
+
+.text {
+    margin-left: 3rem;
+    /* align-items: center; */
+}
+
+.text > h2 {
+    color: #DFECFF;
+    font-size: 2.3rem;
+    /* text-align: left; */
+    font-weight: 700;
+    line-height: 47.05px;
+    height: 47.04998779296875px;
+    width: 106.3790054321289px;
+    margin-bottom: 2rem;
+}
+
+.text > h4 {
+    color: #DFECFF;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 24.09px;
+    margin-bottom: 1.2rem;
+}
+
+.text > p {
+    color: #DFECFF;
+    font-weight: 100;
+    line-height: 20.04px;
+}
+
+#doctors {
+    height: 467px;
+    position: absolute;
+    /* right: 32.2em; */
+    right: 45vw;
+    width: 20.1em;
+}
+
+.logo {
+    background-color: #0066FF;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 100px;
+    /* with the absolute property, the element is removed from the DOM */
+    position: absolute;
+    /* The following properties centers the logo, with the absolute position */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50vw;
+}
+
+.head > h2{
+    font-size: 38.2px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.head > p {
+    height: 20.02001953125px;
+    width: 295.6199951171875px;
+}
+
+.form {
+    margin: 20px 0;
+}
+
+.inputs {
+    margin-bottom: 10px;
+    height: 48px;
+    /* width: 468px; */
+    width: 29.25rem;
+    border: 2px solid #0066FF;
+    border-radius: 8px;
+    font-family: "Lexend Deca", sans-serif;
+    padding-left: 8px;
+    font-size: 1.2rem;
+}
+
+#input-1, #input-2 {
+    margin: 18px 0;
+}
+
+.inputs:focus {
+    border: 2px solid red;
+}
+
+
+.form h4 {
+    color: #0066FF;
+    /* width: 54.58px; */
+    line-height: 16.2px;
+    margin-bottom: 10px;
+}
+
+.login {
+    margin: 18px 0;
+}
+
+.right button {
+    cursor: pointer;
+    height: 3.125rem;
+    width: 29.375rem;
+    border-radius: 8px;
+    border: 0;
+    background-color: #0066FF;
+    color: #DFECFF;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 600;
+    line-height: 20.04px;
+}
+
+.right button:hover {
+    opacity: 0.85;
+    transition: 1.2s;
+}
+
+.create-acc {
+    margin-top: 30px;
+}
+
+.create-acc p {
+    /* height: 0.956rem; */
+    width: 14.109rem;
+    margin: 15px 0;
+}
+
+
+/* Create mobile layout */
+@media (max-width: 800px) {
+    * {
+        overflow-y: visible;
+        overflow-x: hidden;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bulb {
+        /* display: none; */
+        position: absolute;
+        max-height: 17%;
+        top: 25rem;
+    }
+
+    .comments {
+        display: block;
+    }
+
+    .left {
+        height: 0%;
+        min-height: 30%;
+        /* width: 100%; */
+        width: 100vw;
+        /* margin: 0; */
+        /* padding: 0; */
+    }
+
+    img {
+        box-sizing: initial;
+    }
+
+    /* .left {
+        display: flex;
+    } */
+
+    .text {
+        box-sizing: initial;
+        margin: 20px;
+        position: relative;
+        bottom: 8rem;
+    }
+    
+    .text > h4 {
+        line-height: normal;
+    }
+
+    #doctors {
+        position: relative;
+        left: 64%;
+        bottom: 24px;
+        /* position: static;
+        align-self: flex-end; */
+        width: 0rem;
+        /* This was 13rem */
+        min-width: 11rem;
+    }
+    
+    .logo {
+        /* display: none; */
+        top: 42%;
+    }
+
+    .left img {
+        min-height: 10%;
+    }
+
+    .hearts {
+        height: 20%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .right {
+        width: 100vw;
+        margin-top: 10rem;
+    }
+
+    .inputs, .right button {
+        min-width: 70vw;
+        /* width: 90vw; */
+    }
+}
+
+@media (max-width: 810px) {
+    #doctors {
+        right: 36vw;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .inputs, .right button {
+        width: 30vw;
+    }
+}
+
+@media (max-width: 1150px) {
+    .inputs, .right button {
+        width: 40vw;
+    }
+}
+
+@media (max-width: 1300px) {
+    #doctors {
+        height: 330px;
+        /* position: relative; */
+    }
+
+    .wrapper {
+        position: relative;
+    }
+
+    .logo {
+        height: 100px;
+        width: 100px;
+    }
+
+    .logo img {
+        height: 50%;
+    }
+
+    .inputs, buttons {
+        display: flex;
+        /* max-width: calc(50vw * 0.6); */
+    }
+}
+
+@media (max-width: 1520px) {
+    .comments {
+        display: none;
+    }
+}
