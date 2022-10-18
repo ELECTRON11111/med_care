@@ -78,7 +78,7 @@
                         <input type="password" class="inputs" name="password" id="confirm-password" placeholder="confirm password">
                     </div>
     
-                    <button class="login">
+                    <button class="create" id="create">
                         Create Account
                     </button>
     
@@ -91,4 +91,21 @@
         </div>
     </div>
 </body>
+<script>
+    // Global Variables
+    const createBtn = document.querySelector('.form > button');
+    const loginBtn = document.querySelector('.create-acc button');
+
+    function goToLogin(){
+        location.href = "./index.html"
+    }
+
+    function showAlert() {
+        alert("coming soon ....");
+    }
+
+    // Event Listeners
+    loginBtn.addEventListener('click', goToLogin);
+    createBtn.addEventListener('click', showAlert);
+</script>
 </html>

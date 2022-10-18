@@ -71,4 +71,22 @@
         </div>
     </div>
 </body>
+<script>
+    // take element with ID button
+    const signupBtn = document.querySelector('.create-acc button');
+    const loginBtn = document.querySelector('.login');
+
+    function goToSignup(){
+        location.href = "./signup.html"
+    }
+
+    function showAlert() {
+        alert("coming soon ....");
+    }
+
+    // Event Listeners
+    signupBtn.addEventListener('click', goToSignup);
+    loginBtn.addEventListener('click', showAlert);
+</script>
+
 </html>
